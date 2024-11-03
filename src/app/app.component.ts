@@ -50,7 +50,8 @@ constructor(){
     // })
     this.customInterval$.subscribe({
       next: (val) =>console.log(val), //this is the value that emitted
-      complete: () => console.log("completed")
+      complete: () => console.log("completed"), //to read that completed function
+      error: (err) => console.log(err)
     });
     const subscription = this.clickCount$.subscribe({
       next: (val) =>{
